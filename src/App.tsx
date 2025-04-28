@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { GitBranch, Mail, Linkedin, ExternalLink, ArrowRight, Sun, Moon } from 'lucide-react';
 
 export default function Portfolio() {
     const [activeSection, setActiveSection] = useState('home');
-    const [visibleExperiences, setVisibleExperiences] = useState([]);
+    const [visibleExperiences, setVisibleExperiences] = useState<number[]>([]);
     const [darkMode, setDarkMode] = useState(true);
 
-    const experiences = [
+    console.log(activeSection)
+
+    const experiences =  [
         {
             id: 1,
             company: "SoftGem GLOBAL TECHNOLOGIES",
@@ -82,7 +84,7 @@ export default function Portfolio() {
                             const showExperiencesWithDelay = async () => {
                                 for (let i = 0; i < experiences.length; i++) {
                                     await new Promise(resolve => setTimeout(resolve, 200));
-                                    setVisibleExperiences(prev => [...prev, experiences[i].id]);
+                                    setVisibleExperiences(prev=> [...prev, experiences[i].id]);
                                 }
                             };
 
@@ -125,7 +127,6 @@ export default function Portfolio() {
         timeline: darkMode ? 'border-blue-500' : 'border-blue-400',
         footer: darkMode ? 'bg-gray-900 border-t border-gray-800' : 'bg-gray-100 border-t border-gray-200'
     };
-
     return (
         <div className={`${getThemeClasses.body} min-h-screen font-sans transition-colors duration-300 w-full`}>
             {/* Navigation */}
@@ -230,7 +231,7 @@ export default function Portfolio() {
                     <div className="space-y-12">
                         {experiences.map((exp, index) => (
                             <div
-                                key={exp.id}
+                                key={index}
                                 className={`transform transition-all duration-500 ${
                                     visibleExperiences.includes(exp.id)
                                         ? 'translate-x-0 opacity-100'
