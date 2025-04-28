@@ -169,7 +169,7 @@ export default function Portfolio() {
                             Ndubuisi Ukonu
                         </h1>
                         <p className={`text-xl ${getThemeClasses.muted} max-w-2xl mb-8`}>
-                            I am a Software Engineer, I Experience spans across Frontend Engineering (Vue.js, React.js, Mobile Development(React Native), Backend Engineering (Django, Django Rest Framework, FastAPI), Nextjs and Cloud Engineering (AWS).
+                            I am a Software Engineer, My Experience spans across Frontend Engineering (Vue.js, React.js, Mobile Development(React Native), Backend Engineering (Django, Django Rest Framework, FastAPI), Nextjs and Cloud Engineering (AWS).
                         </p>
                         <div className="flex lg:space-x-4 md:space-x-4 gap-3 flex-col lg:flex-row md:flex-row w-full lg:max-w">
                             <a href="#contact" className={`px-6 py-3 text-center ${getThemeClasses.button} rounded-[10px] transition-colors`}>
