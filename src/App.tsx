@@ -56,7 +56,8 @@ export default function Portfolio() {
         "JavaScript", "React.js", "Vue.js", "React Native", "Expo",
         "Next.js", "Tailwind CSS",
         "REST API", "Cloud Services(AWS)",
-        "Cloud Infrastructure"
+        "Cloud Infrastructure",
+        "Python","Django", "FastAPI", "REST API"
     ];
 
     const education = {
